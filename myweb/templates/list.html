@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .content {font-size: 12px}
+    </style>
+</head>
+<body>
+    <h2>Blog List</h2>
+        <a href="/add/">Append</a>
+        {% for article in articles %}
+            <div>
+                <h3>title : <a href="/blog/topic_{{ article.id }}">{{ article.title }}</a></h3>
+                <div class="content">
+                    {{ article.content }}
+                </div>
+            </div>
+            <hr>
+        {% endfor %}
+</body>
+</html>

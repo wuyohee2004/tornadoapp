@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h2>Title:{{ article.title }}</h2>
+    <div>
+        <h5>{{ article.content }}</h5>
+    </div>
+    <hr>
+    <div>
+        <h4 style="font-weight: bold">Comments</h4>
+        {% for comment in comments %}
+            <a>
+                {{ comment.detail }}
+            </a>
+            <hr>
+        {% endfor %}
+    </div>
+    <form action="/comment/add/" method="post">
+        <p>Comment:<textarea name="detail"></textarea></p>
+        <input type="hidden" name="article" value="{{ article.id }}">
+        <p><input type="submit"></p>
+    </form>
+
+    <a href="/list/">return</a>
+</body>
+</html>

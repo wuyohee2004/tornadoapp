@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    {% for user in users %}
+    <p>{{ user['account'] }}<a href="/follow?follow_user={{user['account']}}">follow</a></p>
+    <br/>
+    {% end %}
+</body>
+</html>

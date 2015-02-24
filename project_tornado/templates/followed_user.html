@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>Followed :</h1>
+    {% for follow in followed_users %}
+        <p>{{ follow["follow_user"]}}</p>
+    {% end %}
+<br/>
+<a href="/users">user list</a>
+</body>
+</html>
